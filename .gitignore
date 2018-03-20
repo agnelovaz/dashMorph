@@ -1,0 +1,5 @@
+bin/
+obj/Debug
+obj/DashMorph.csproj.nuget.cache
+obj/DashMorph.csproj.nuget.g.props
+obj/DashMorph.csproj.nuget.g.targets

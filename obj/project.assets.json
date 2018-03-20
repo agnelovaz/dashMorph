@@ -196,6 +196,71 @@
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
+      },
+      "Tizen/5.0.0-preview1": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Tizen.Log": "5.0.0-preview1"
+        },
+        "compile": {
+          "bin/placeholder/Tizen.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Tizen.dll": {}
+        }
+      },
+      "Tizen.Applications.Common/5.0.0-preview1": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Tizen": "5.0.0-preview1",
+          "Tizen.Log": "5.0.0-preview1"
+        },
+        "compile": {
+          "bin/placeholder/Tizen.Applications.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Tizen.Applications.Common.dll": {}
+        }
+      },
+      "Tizen.Log/5.0.0-preview1": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Tizen.Log.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Tizen.Log.dll": {}
+        }
+      },
+      "Tizen.NUI/5.0.0-preview1": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Tizen.Applications.Common": "5.0.0-preview1",
+          "Tizen.System.SystemSettings": "5.0.0-preview1"
+        },
+        "compile": {
+          "bin/placeholder/Tizen.NUI.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Tizen.NUI.dll": {}
+        }
+      },
+      "Tizen.System.SystemSettings/5.0.0-preview1": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Tizen": "5.0.0-preview1",
+          "Tizen.Log": "5.0.0-preview1"
+        },
+        "compile": {
+          "bin/placeholder/Tizen.System.SystemSettings.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Tizen.System.SystemSettings.dll": {}
+        }
       }
     }
   },
@@ -656,11 +721,37 @@
         "netstandard.library.2.0.0.nupkg.sha512",
         "netstandard.library.nuspec"
       ]
+    },
+    "Tizen/5.0.0-preview1": {
+      "type": "project",
+      "path": "../TizenFX/src/Tizen/Tizen.csproj",
+      "msbuildProject": "../TizenFX/src/Tizen/Tizen.csproj"
+    },
+    "Tizen.Applications.Common/5.0.0-preview1": {
+      "type": "project",
+      "path": "../TizenFX/src/Tizen.Applications.Common/Tizen.Applications.Common.csproj",
+      "msbuildProject": "../TizenFX/src/Tizen.Applications.Common/Tizen.Applications.Common.csproj"
+    },
+    "Tizen.Log/5.0.0-preview1": {
+      "type": "project",
+      "path": "../TizenFX/src/Tizen.Log/Tizen.Log.csproj",
+      "msbuildProject": "../TizenFX/src/Tizen.Log/Tizen.Log.csproj"
+    },
+    "Tizen.NUI/5.0.0-preview1": {
+      "type": "project",
+      "path": "../TizenFX/src/Tizen.NUI/Tizen.NUI.csproj",
+      "msbuildProject": "../TizenFX/src/Tizen.NUI/Tizen.NUI.csproj"
+    },
+    "Tizen.System.SystemSettings/5.0.0-preview1": {
+      "type": "project",
+      "path": "../TizenFX/src/Tizen.System.SystemSettings/Tizen.System.SystemSettings.csproj",
+      "msbuildProject": "../TizenFX/src/Tizen.System.SystemSettings/Tizen.System.SystemSettings.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
-      "Microsoft.NETCore.App >= 2.0.0"
+      "Microsoft.NETCore.App >= 2.0.0",
+      "Tizen.NUI >= 5.0.0-preview1"
     ]
   },
   "packageFolders": {
@@ -670,9 +761,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/agnelo/git/tizenDev/dashMorph/dashMorph.csproj",
-      "projectName": "dashMorph",
-      "projectPath": "/home/agnelo/git/tizenDev/dashMorph/dashMorph.csproj",
+      "projectUniqueName": "/home/agnelo/git/tizenDev/dashMorph/DashMorph.csproj",
+      "projectName": "DashMorph",
+      "projectPath": "/home/agnelo/git/tizenDev/dashMorph/DashMorph.csproj",
       "packagesPath": "/home/agnelo/.nuget/packages/",
       "outputPath": "/home/agnelo/git/tizenDev/dashMorph/obj/",
       "projectStyle": "PackageReference",
@@ -690,7 +781,11 @@
       },
       "frameworks": {
         "netcoreapp2.0": {
-          "projectReferences": {}
+          "projectReferences": {
+            "/home/agnelo/git/tizenDev/TizenFX/src/Tizen.NUI/Tizen.NUI.csproj": {
+              "projectPath": "/home/agnelo/git/tizenDev/TizenFX/src/Tizen.NUI/Tizen.NUI.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
