@@ -20,20 +20,23 @@ namespace DashMorph
 
         private void Initialize()
         {
-            Console.WriteLine("Initialize");
+            Console.WriteLine("Initialize DashMorph");
             Window window = Window.Instance;
             window.BackgroundColor = Color.White;
 
-            ImageView imageView1 = new ImageView("./res/images/little-dog.jpg");
-            ImageView imageView2 = new ImageView("./res/images/little-dog.jpg");
-            ImageView imageView3 = new ImageView("./res/images/little-dog.jpg");
+            HorizontalBox hbox = new HorizontalBox();
 
-            imageView2.Position2D = new Position2D( 160, 0 );
-            imageView3.Position2D = new Position2D( 320, 0 );
+//            ImageView imageView1 = new ImageView("./res/images/little-dog.jpg");
+  //          ImageView imageView2 = new ImageView("./res/images/little-dog.jpg");
+    //        ImageView imageView3 = new ImageView("./res/images/little-dog.jpg");
 
-            window.Add(imageView1);
-            window.Add(imageView2);
-            window.Add(imageView3);
+      //      imageView2.Position2D = new Position2D( 160, 0 );
+        //    imageView3.Position2D = new Position2D( 320, 0 );
+
+          //  window.Add(imageView1);
+            //window.Add(imageView2);
+            //window.Add(imageView3);
+            window.Add(hbox);
 
         }
 
